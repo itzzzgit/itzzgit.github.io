@@ -1,0 +1,280 @@
+/* ============================================================
+   ADMIN PANEL — diseño independiente de la invitación
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f4f6f9;
+  color: #1a1a2e;
+  min-height: 100vh;
+}
+
+/* El atributo [hidden] siempre oculta, sin importar el display del elemento */
+[hidden] { display: none !important; }
+
+/* ============================================================
+   LOGIN
+   ============================================================ */
+.login-screen {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #1a1a2e 0%, #2d1b3d 50%, #1a1a2e 100%);
+}
+
+.login-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 36px 36px;
+  width: min(380px, 90vw);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.35);
+  text-align: center;
+}
+
+.login-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #9d3f61, #c97a98);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 16px;
+  letter-spacing: 0.05em;
+}
+
+.login-title {
+  margin: 0 0 4px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.login-subtitle {
+  margin: 0 0 28px;
+  font-size: 0.88rem;
+  color: #888;
+}
+
+.login-form { display: grid; gap: 14px; text-align: left; }
+
+.login-field { display: grid; gap: 6px; }
+.login-field label { font-size: 0.85rem; font-weight: 600; color: #444; }
+.login-field input {
+  padding: 11px 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 10px;
+  font: inherit;
+  font-size: 1rem;
+  transition: border-color 200ms;
+}
+.login-field input:focus { outline: none; border-color: #9d3f61; }
+
+.login-btn {
+  padding: 12px;
+  background: linear-gradient(120deg, #9d3f61, #c97a98);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 200ms;
+}
+.login-btn:hover { opacity: 0.88; }
+
+.login-error {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #c0392b;
+  text-align: center;
+  min-height: 1.2rem;
+}
+
+/* ============================================================
+   PANEL HEADER
+   ============================================================ */
+.panel-header {
+  background: #fff;
+  border-bottom: 1px solid #e8eaed;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-left { display: flex; align-items: center; gap: 12px; }
+
+.header-badge {
+  background: linear-gradient(120deg, #9d3f61, #c97a98);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.panel-header h1 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.btn-logout {
+  padding: 8px 16px;
+  background: transparent;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  transition: border-color 200ms, color 200ms;
+}
+.btn-logout:hover { border-color: #9d3f61; color: #9d3f61; }
+
+/* ============================================================
+   PANEL BODY
+   ============================================================ */
+.panel-body {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 24px 48px;
+}
+
+/* ============================================================
+   STATS
+   ============================================================ */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px 20px 18px;
+  border-left: 4px solid transparent;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.stat-total  { border-color: #6c757d; }
+.stat-accept { border-color: #27ae60; }
+.stat-reject { border-color: #e74c3c; }
+
+.stat-label  { margin: 0 0 6px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #888; }
+.stat-number { margin: 0; font-size: 2.2rem; font-weight: 700; color: #1a1a2e; }
+
+/* ============================================================
+   TOOLBAR
+   ============================================================ */
+.toolbar {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 9px 18px;
+  border: none;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 180ms;
+}
+.btn:hover:not(:disabled) { opacity: 0.85; }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn-secondary { background: #f0f0f0; color: #333; }
+.btn-primary   { background: linear-gradient(120deg, #9d3f61, #c97a98); color: #fff; }
+
+/* ============================================================
+   TABLE
+   ============================================================ */
+.table-wrapper {
+  background: #fff;
+  border-radius: 14px;
+  overflow-x: auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+table { width: 100%; border-collapse: collapse; min-width: 640px; }
+
+thead tr { background: #f8f9fa; }
+th {
+  padding: 12px 14px;
+  text-align: left;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #888;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
+}
+
+td { padding: 11px 14px; font-size: 0.95rem; border-bottom: 1px solid #f0f0f0; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #fafafa; }
+
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+.badge-accept { background: #eafaf1; color: #1e8449; }
+.badge-reject { background: #fdf0f0; color: #c0392b; }
+
+.btn-delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background 0.15s;
+  opacity: 0.6;
+}
+.btn-delete:hover { background: #fde8e8; opacity: 1; }
+.btn-delete:disabled { opacity: 0.3; cursor: not-allowed; }
+
+/* ============================================================
+   STATUS
+   ============================================================ */
+.panel-status {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: #888;
+  text-align: right;
+  min-height: 1.2rem;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 600px) {
+  .panel-header { padding: 14px 16px; }
+  .panel-body   { padding: 20px 12px 40px; }
+  .stats-grid   { grid-template-columns: 1fr; gap: 10px; }
+  .toolbar      { justify-content: stretch; }
+  .toolbar .btn { flex: 1; text-align: center; }
+}
