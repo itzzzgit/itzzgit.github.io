@@ -1,0 +1,323 @@
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invitación XV | Julieta &amp; Valeria Díaz Martínez</title>
+    <meta
+      name="description"
+      content="Invitación XV años de Julieta y Valeria Díaz Martínez. Acompáñanos el 18 de julio en una noche inolvidable."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Great+Vibes&family=Lato:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <audio id="bgMusic" src="Audio/cancioninvitacion.mp3" loop preload="auto"></audio>
+    <button type="button" class="music-toggle" id="musicToggle" aria-label="Pausar música">
+      <i class="bi bi-music-note-beamed" aria-hidden="true"></i>
+    </button>
+    <img src="Images/esquinero.png" class="corner corner--tl" alt="" aria-hidden="true" />
+    <img src="Images/esquinero.png" class="corner corner--tr" alt="" aria-hidden="true" />
+    <img src="Images/esquinero.png" class="corner corner--bl" alt="" aria-hidden="true" />
+    <img src="Images/esquinero.png" class="corner corner--br" alt="" aria-hidden="true" />
+
+    <div class="letter-overlay" id="letterOverlay">
+      <div class="letter-container">
+        <img src="Images/parte de arriba invi.png" class="letter-top" alt="" aria-hidden="true" />
+        <button
+          type="button"
+          class="letter-seal"
+          id="sealButton"
+          aria-label="Abrir carta"
+        >
+          <img src="Images/sellocarta.png" alt="" aria-hidden="true" />
+        </button>
+        <img src="Images/Parte de abajo invi.png" class="letter-bottom" alt="" aria-hidden="true" />
+        <div class="letter-text letter-text-top">18.07.2026</div>
+        <div class="letter-text letter-text-bottom">
+          <p class="letter-names">Valeria &amp; Julieta</p>
+          <p class="letter-years">XV Años</p>
+        </div>
+      </div>
+    </div>
+
+    <main class="story">
+      <section class="scene reveal" id="inicio">
+        <article class="scene-content cover-content">
+          <div class="cover-card">
+            <p class="cover-date">18 · 07 · 2026</p>
+            <span class="cover-line" aria-hidden="true"></span>
+            <div class="cover-title">
+              <span class="cover-name">Julieta</span>
+              <span class="cover-amp"><span>&amp;</span></span>
+              <span class="cover-name">Valeria</span>
+            </div>
+            <span class="cover-line" aria-hidden="true"></span>
+            <p class="cover-tag">¡Nuestros XV Años!</p>
+            <p class="cover-quote">Hoy comienza el sueño más hermoso de mi vida.</p>
+            <a href="#countdown" class="cover-scroll" aria-label="Desliza hacia abajo">
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <section class="scene reveal" id="countdown">
+        <img src="Images/cuenta regresiva.png" class="countdown-frame" alt="" aria-hidden="true" />
+        <article class="scene-content countdown-content">
+          <h2>Cuenta Regresiva</h2>
+          <div class="countdown-grid" aria-label="Cuenta regresiva al evento">
+            <div class="count-item">
+              <span id="daysValue" class="count-value">000</span>
+              <span class="count-label">Días</span>
+            </div>
+            <div class="count-item">
+              <span id="hoursValue" class="count-value">000</span>
+              <span class="count-label">Horas</span>
+            </div>
+            <div class="count-item">
+              <span id="minutesValue" class="count-value">000</span>
+              <span class="count-label">Minutos</span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="scene reveal" id="galeria">
+        <article class="scene-content gallery-content">
+          <header class="section-head reveal">
+            <span class="section-eyebrow">Nuestros recuerdos</span>
+            <h2 class="section-script">Retratos de Nuestra Historia</h2>
+            <div class="ornament-divider" aria-hidden="true">
+              <span class="line"></span>
+              <i class="bi bi-camera"></i>
+              <span class="line"></span>
+            </div>
+          </header>
+
+          <div class="carousel reveal">
+            <div class="carousel-track" id="carouselTrack">
+              <figure class="carousel-slide">
+                <img src="Images/carru1.png" alt="Recuerdo 1" loading="lazy" />
+              </figure>
+              <figure class="carousel-slide">
+                <img src="Images/carru2.png" alt="Recuerdo 2" loading="lazy" />
+              </figure>
+              <figure class="carousel-slide">
+                <img src="Images/carru3.png" alt="Recuerdo 3" loading="lazy" />
+              </figure>
+              <figure class="carousel-slide">
+                <img src="Images/carru4.png" alt="Recuerdo 4" loading="lazy" />
+              </figure>
+            </div>
+            <button type="button" class="carousel-btn carousel-prev" aria-label="Anterior">
+              <i class="bi bi-chevron-left" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="carousel-btn carousel-next" aria-label="Siguiente">
+              <i class="bi bi-chevron-right" aria-hidden="true"></i>
+            </button>
+            <div class="carousel-dots" id="carouselDots" aria-hidden="true"></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="scene reveal" id="familia">
+        <article class="scene-content family-content">
+          <h2>Con Nuestros Padres y Padrinos</h2>
+          <div class="family-block">
+            <h3>Padres</h3>
+            <p>Mario Díaz</p>
+            <p>Paola Martínez</p>
+          </div>
+          <div class="godparents-grid">
+            <div class="family-block">
+              <h3>Padrinos de Julieta</h3>
+              <p>Juan León</p>
+              <p>Norma Guerrero</p>
+            </div>
+            <div class="family-block">
+              <h3>Padrinos de Valeria</h3>
+              <p>Hugo Armenta</p>
+              <p>Berenice Bojórquez</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="scene reveal" id="itinerario">
+        <article class="scene-content places-content">
+          <header class="section-head reveal">
+            <span class="section-eyebrow">Las ubicaciones</span>
+            <h2 class="section-script">¿Dónde Celebramos?</h2>
+            <div class="ornament-divider" aria-hidden="true">
+              <span class="line"></span>
+              <i class="bi bi-suit-diamond-fill"></i>
+              <span class="line"></span>
+            </div>
+          </header>
+
+          <article class="place-card reveal">
+            <span class="detail-frame" aria-hidden="true"></span>
+            <i class="bi bi-bank place-icon" aria-hidden="true"></i>
+            <h3>Santa Misa</h3>
+            <span class="detail-label">Ceremonia Religiosa</span>
+            <p class="place-name">Seminario Menor, Insurgentes</p>
+            <button
+              type="button"
+              class="map-btn"
+              data-map-title="Santa Misa — Seminario Menor, Insurgentes"
+              data-map-query="Seminario Menor Insurgentes"
+            >
+              <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+              Ver mapa
+            </button>
+          </article>
+
+          <article class="place-card reveal">
+            <span class="detail-frame" aria-hidden="true"></span>
+            <i class="bi bi-flower1 place-icon" aria-hidden="true"></i>
+            <h3>Recepción</h3>
+            <span class="detail-label">Fiesta y Celebración</span>
+            <p class="place-name">Jardín Puente al Edén</p>
+            <button
+              type="button"
+              class="map-btn"
+              data-map-title="Recepción — Jardín Puente al Edén"
+              data-map-query="Jardin Puente al Eden"
+            >
+              <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+              Ver mapa
+            </button>
+          </article>
+        </article>
+      </section>
+
+      <section class="scene reveal" id="horarios">
+        <article class="scene-content schedule-content">
+          <header class="section-head reveal">
+            <span class="section-eyebrow">El gran día</span>
+            <h2 class="section-script">Itinerario de la Noche</h2>
+            <div class="ornament-divider" aria-hidden="true">
+              <span class="line"></span>
+              <i class="bi bi-suit-diamond-fill"></i>
+              <span class="line"></span>
+            </div>
+          </header>
+
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <span class="timeline-marker" aria-hidden="true">
+                <i class="bi bi-music-note-beamed"></i>
+              </span>
+              <div class="timeline-body">
+                <span class="timeline-time">8:00 PM – 2:00 AM</span>
+                <h3>Recepción</h3>
+                <p>Acompáñanos a celebrar toda la noche.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal">
+              <span class="timeline-marker" aria-hidden="true">
+                <i class="bi bi-cup-hot-fill"></i>
+              </span>
+              <div class="timeline-body">
+                <span class="timeline-time">8:30 PM</span>
+                <h3>Cena</h3>
+                <p>Disfrutemos juntos de una deliciosa cena.</p>
+              </div>
+            </article>
+          </div>
+        </article>
+      </section>
+
+      <section class="scene reveal" id="detalles">
+        <article class="scene-content details-content">
+          <header class="section-head reveal">
+            <span class="section-eyebrow">Para tener en cuenta</span>
+            <h2 class="section-script">Detalles</h2>
+            <div class="ornament-divider" aria-hidden="true">
+              <span class="line"></span>
+              <i class="bi bi-suit-diamond-fill"></i>
+              <span class="line"></span>
+            </div>
+          </header>
+
+          <article class="detail-card reveal">
+            <span class="detail-frame" aria-hidden="true"></span>
+            <i class="bi bi-gem detail-icon" aria-hidden="true"></i>
+            <h3>Código de Vestimenta</h3>
+            <span class="detail-label">Formal / Etiqueta</span>
+            <p>Los tonos rosa y champagne están reservados para las quinceañeras.</p>
+          </article>
+
+          <article class="detail-card reveal">
+            <span class="detail-frame" aria-hidden="true"></span>
+            <i class="bi bi-envelope-heart detail-icon" aria-hidden="true"></i>
+            <h3>Regalos</h3>
+            <span class="detail-label">Lluvia de sobres</span>
+            <p>Tu presencia es nuestro mejor regalo; si deseas obsequiarnos algo, un sobre será recibido con cariño.</p>
+          </article>
+        </article>
+      </section>
+
+      <section class="scene reveal" id="cierre">
+        <article class="scene-content closing-content">
+          <span class="closing-flourish" aria-hidden="true">
+            <i class="bi bi-flower2"></i>
+          </span>
+          <p class="closing-eyebrow">Con todo nuestro cariño</p>
+          <h2 class="closing-script">¡Te Esperamos!</h2>
+          <div class="ornament-divider" aria-hidden="true">
+            <span class="line"></span>
+            <i class="bi bi-suit-diamond-fill"></i>
+            <span class="line"></span>
+          </div>
+          <p class="closing-names">Julieta &amp; Valeria</p>
+          <p class="closing-date">18 de Julio · 2026</p>
+          <p class="closing-quote">Gracias por ser parte de uno de los momentos más especiales de nuestras vidas.</p>
+        </article>
+      </section>
+    </main>
+
+    <div class="map-modal" id="mapModal" aria-hidden="true">
+      <div class="map-modal-backdrop" data-close></div>
+      <div class="map-modal-box" role="dialog" aria-modal="true" aria-labelledby="mapModalTitle">
+        <button type="button" class="map-modal-close" data-close aria-label="Cerrar">
+          <i class="bi bi-x-lg" aria-hidden="true"></i>
+        </button>
+        <h3 id="mapModalTitle" class="map-modal-title">Mapa</h3>
+        <div class="map-modal-frame">
+          <iframe
+            id="mapModalIframe"
+            src=""
+            title="Mapa de la ubicación"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <a
+          id="mapModalLink"
+          class="map-modal-link"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+          Abrir en Google Maps
+        </a>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
